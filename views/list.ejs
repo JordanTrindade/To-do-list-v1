@@ -1,0 +1,22 @@
+<%- include('head') -%>
+    <div class="box" id="heading">
+        <h1>Hoje é <%= dia %>!</h1>
+        <h2><%= tituloLista %></h2>
+    </div>
+
+    <div class="box">
+
+        <% for(i of tarefa){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= i %>
+                </p>
+            </div>
+            <% } %>
+                <form class="item" method="post" action="/">
+                    <input type="text" name="tarefa" placeholder="Nova tarefa" autocomplete="off">
+                    <button type="submit" name="enviar" value="<%= tituloLista %>">+</button>
+                </form>
+    </div>
+<%- include('footer') -%>
